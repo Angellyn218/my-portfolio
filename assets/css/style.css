@@ -1,0 +1,86 @@
+* {
+    line-height: 150%;
+}
+:root {
+    --main-background: rgb(232, 255, 255);
+    --main-text: black;
+    --main-heading: rgb(48, 1, 79);
+    --main-heading-text: white;
+    --footer-background: aqua, rgb(163, 254, 254);
+    --card-title: darkblue;
+    --card-skills: gray;
+    --card-border: darkblue;
+} 
+
+h1,
+h2,
+h3{
+    text-align: center;
+}
+
+.main-heading {
+    display: block;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    background-color: var(--main-heading);
+    color: var(--main-heading-text);
+}
+
+.profile,
+.about-me,
+.projects {
+    background-color: var(--main-background);
+    padding-bottom: 30px;
+} 
+
+.profile {
+    padding: 10px;
+}
+
+.title {
+    color: var(--card-title);
+}
+
+.skills {
+    text-align: center;
+    color: var(--card-skills);
+}
+
+nav {
+    text-align: right;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 2%;
+}
+
+figure img {
+    display: block;
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact {
+    display: block;
+    justify-content: center;
+    background-color: var(--main-heading);
+    color: var(--main-heading-text);
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 3%;
+    width: 100%;
+    height: 100px;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+footer ul li a{
+    color: var(--main-heading-text);
+}
