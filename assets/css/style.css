@@ -9,12 +9,14 @@
     --main-heading-text: white;
     --footer-background: aqua, rgb(163, 254, 254);
     --card-container-size: 45%;
+    --card-container-size-small: 100%;
     --card-title: darkblue;
     --card-skills: gray;
     --card-border: darkblue;
     --card-margin: 2%;
     --card-width: 45%;
     --first-card-width: 100%;
+
 } 
 
 h1,
@@ -137,4 +139,17 @@ footer ul li {
 
 footer ul li a{
     color: var(--main-heading-text);
+}
+
+@media screen and (max-width: 768px) {
+    .first {
+        width: var(--card-container-size-small);
+    }
+    .rest {
+        width: var(--card-container-size-small);
+    }
+
+    #first-card {
+        width: calc(var(--card-width)*2 + var(--card-margin)*3);
+    }
 }
