@@ -4,12 +4,17 @@
 :root {
     --main-background: rgb(232, 255, 255);
     --main-text: black;
+    --title: rgb(48, 1, 79);
     --main-heading: rgb(48, 1, 79);
     --main-heading-text: white;
     --footer-background: aqua, rgb(163, 254, 254);
+    --card-container-size: 45%;
     --card-title: darkblue;
     --card-skills: gray;
     --card-border: darkblue;
+    --card-margin: 2%;
+    --card-width: 45%;
+    --first-card-width: 100%;
 } 
 
 h1,
@@ -17,6 +22,13 @@ h2,
 h3{
     text-align: center;
 }
+
+h2 {
+    color: title;
+    font-size: 30px;
+}
+
+
 
 .main-heading {
     display: block;
@@ -27,24 +39,8 @@ h3{
     color: var(--main-heading-text);
 }
 
-.profile,
-.about-me,
-.projects {
-    background-color: var(--main-background);
-    padding-bottom: 30px;
-} 
-
-.profile {
-    padding: 10px;
-}
-
-.title {
-    color: var(--card-title);
-}
-
-.skills {
-    text-align: center;
-    color: var(--card-skills);
+.main-heading h1 {
+    font-size: 40px;
 }
 
 nav {
@@ -56,11 +52,68 @@ nav ul li {
     margin-right: 2%;
 }
 
+.profile,
+.about-me,
+.projects {
+    background-color: var(--main-background);
+    padding-bottom: 30px;
+    padding-left: 2%;
+    padding-right: 2%;
+} 
+
+.profile {
+    padding: 10px;
+}
+
 figure img {
     display: block;
     width: 25%;
     margin-left: auto;
     margin-right: auto;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.first {
+    width: var(--card-container-size);
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.rest {
+    display: flex;
+    flex-wrap: wrap;
+    width: var(--card-container-size);
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: var(--card-width);
+    flex: 1 0 auto;
+    border: 5px solid var(--card-border);
+    margin: var(--card-margin);
+}
+
+#first-card {
+    width: var(--first-card-width);
+    margin: var(--card-margin);
+}
+
+.title {
+    color: var(--card-title);
+}
+
+.skills {
+    text-align: center;
+    color: var(--card-skills);
 }
 
 .contact {
@@ -69,8 +122,8 @@ figure img {
     background-color: var(--main-heading);
     color: var(--main-heading-text);
     text-align: center;
-    padding-top: 2%;
-    padding-bottom: 3%;
+    padding-top: 20px;
+    padding-bottom: 40px;
     width: 100%;
     height: 100px;
 }
@@ -79,6 +132,7 @@ footer ul li {
     display: inline;
     margin-right: 2%;
     margin-left: 2%;
+    margin-bottom: 2%;
 }
 
 footer ul li a{
