@@ -19,14 +19,21 @@
     --card-skills: gray;
     --card-border: darkblue;
     --card-background: white;
+    --card-hover-background: rgb(255, 250, 189);
+    --card-shadow: rgb(0, 254, 254);
+    --card-shadow-offset: 0px;
+    --card-shadow-dropoff: 35px;
     --card-image-background: rgb(163, 254, 254), rgb(0, 149, 255);
     --card-image-background-height: 200px;
+    --card-hover-height: calc(var(--card-image-background-height) + 80px);
     --card-margin: 2%;
     --card-width: 45%;
 
     --f-card-width: 100%;
     --f-card-image-background-height-init: calc(var(--card-image-background-height)*2 + 80px);
     --f-card-image-background-height-med: calc(var(--card-image-background-height)*2);
+    --f-card-hover-height: calc(var(--f-card-image-background-height-init) + 80px);
+    
 
 } 
 
@@ -119,6 +126,12 @@ main {
     border: 5px solid var(--card-border);
     margin: var(--card-margin);
     background-color: var(--card-background);
+    transition: background-color 2s;
+}
+
+.card:hover {
+    box-shadow: var(--card-shadow-offset) var(--card-shadow-offset) var(--card-shadow-dropoff) var(--card-shadow);
+    background-color: var(--card-hover-background);
 }
 
 #first-card {
@@ -142,6 +155,11 @@ main {
     margin: auto;
     background-image: linear-gradient(15deg, var(--card-image-background));
     min-height: var(--card-image-background-height);
+    transition: all 2s ease;
+}
+
+.website-image:hover {
+    min-height: var(--card-hover-height);
 }
 
 .website-image a img{
@@ -157,6 +175,11 @@ main {
 
 #first-card .website-image {
     min-height: var(--f-card-image-background-height-init);
+    transition: all 2s;
+}
+
+#first-card .website-image:hover {
+    min-height: var(--f-card-hover-height);
 }
 
 #contact {
