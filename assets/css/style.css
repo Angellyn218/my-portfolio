@@ -54,9 +54,14 @@ nav ul li {
     margin-right: 2%;
 }
 
+nav ul li a {
+    color: var(--main-heading-text);
+    text-decoration: none;
+}
+
 .profile,
-.about-me,
-.projects {
+#about-me,
+#projects {
     background-color: var(--main-background);
     padding-bottom: 30px;
     padding-left: 2%;
@@ -118,7 +123,7 @@ main {
     color: var(--card-skills);
 }
 
-.contact {
+#contact {
     display: block;
     justify-content: center;
     background-color: var(--main-heading);
@@ -139,6 +144,7 @@ footer ul li {
 
 footer ul li a{
     color: var(--main-heading-text);
+    text-decoration: none;
 }
 
 @media screen and (max-width: 768px) {
