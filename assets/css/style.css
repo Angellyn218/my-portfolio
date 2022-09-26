@@ -5,8 +5,10 @@
     --main-background: rgb(232, 255, 255);
     --main-text: black;
     --title: rgb(48, 1, 79);
-    --main-heading: rgb(48, 1, 79);
+    --main-heading: rgb(2, 2, 84);
     --main-heading-text: white;
+
+    --img-border: black;
 
     --headshot-size-init: 25%;
     --headshot-size-med: 30%;
@@ -16,6 +18,7 @@
     --card-container-size-med: 80%;
     --card-container-size-small: 100%;
     --card-title: darkblue;
+    --card-title-size: ;
     --card-skills: gray;
     --card-border: darkblue;
     --card-background: white;
@@ -33,38 +36,42 @@
     --f-card-image-background-height-init: calc(var(--card-image-background-height)*2 + 80px);
     --f-card-image-background-height-med: calc(var(--card-image-background-height)*2);
     --f-card-hover-height: calc(var(--f-card-image-background-height-init) + 80px);
-    
-
 } 
 
-h1,
+.main-heading h2 {
+    text-align: left;
+    margin-left: 4%;
+    transition: all 2s;
+    font-size: 24px;
+}
+
 h2,
 h3{
     text-align: center;
 }
 
-h2 {
-    color: title;
-    font-size: 30px;
+h1 {
+    color: var(--title);
+    font-size: 50px;
 }
 
-
+img {
+    border: 2px solid var(--img-border);
+}
 
 .main-heading {
     display: block;
     justify-content: space-between;
-    padding-top: 30px;
-    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 15px;
     background-color: var(--main-heading);
     color: var(--main-heading-text);
 }
 
-.main-heading h1 {
-    font-size: 40px;
-}
 
 nav {
     text-align: right;
+    transition: all 2s;
 }
 
 nav ul li {
@@ -77,6 +84,11 @@ nav ul li a {
     text-decoration: none;
 }
 
+.banner img{
+    border: 0px solid white;
+    width: 100%;
+}
+
 .profile,
 #about-me,
 #projects {
@@ -84,6 +96,7 @@ nav ul li a {
     padding-bottom: 30px;
     padding-left: 2%;
     padding-right: 2%;
+    padding-top: 50px;
 } 
 
 .profile {
@@ -163,8 +176,9 @@ main {
 
 .website-image a img{
     display: block;
-    padding: 2%;
-    width:100%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 98%;
 }
 
 #first-card {
@@ -193,6 +207,10 @@ main {
     height: 25%;
 }
 
+#contact h2 {
+    font-size: 35px;
+}
+
 footer ul li {
     display: inline;
     margin-right: 2%;
@@ -207,10 +225,7 @@ footer ul li a{
 
 @media screen and (max-width: 992px) {
     nav {
-        text-align: center;
         margin-top: 2%;
-        margin-left: auto;
-        margin-left: auto;
     }
 
     figure img {
@@ -234,11 +249,19 @@ footer ul li a{
 }
 
 @media screen and (max-width: 768px) {
+    .main-heading h2 {
+        text-align: center;
+        margin-left: 0%;
+    }
+
     nav {
         text-align: center;
-        margin-top: 3%;
         margin-left: auto;
         margin-left: auto;
+    }
+
+    h1 {
+        font-size: 35px;
     }
 
     figure img {
@@ -254,5 +277,9 @@ footer ul li a{
 
     #first-card {
         width: calc(var(--card-width)*2 + var(--card-margin)*3);
+    }
+
+    #contact h1{
+        font-size: 30px;
     }
 }
