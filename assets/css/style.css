@@ -45,7 +45,6 @@
     font-size: 24px;
 }
 
-h2,
 h3{
     text-align: center;
 }
@@ -55,9 +54,6 @@ h1 {
     font-size: 50px;
 }
 
-img {
-    border: 2px solid var(--img-border);
-}
 
 .main-heading {
     display: block;
@@ -85,7 +81,6 @@ nav ul li a {
 }
 
 .banner img{
-    border: 0px solid white;
     width: 100%;
 }
 
@@ -103,8 +98,9 @@ nav ul li a {
     padding: 10px;
 }
 
-figure img {
+.profile img {
     display: block;
+    border: 2px solid var(--img-border);
     width: var(--headshot-size-init);
     margin-left: auto;
     margin-right: auto;
@@ -176,6 +172,7 @@ main {
 
 .website-image a img{
     display: block;
+    border: 2px solid var(--img-border);
     margin-left: auto;
     margin-right: auto;
     width: 98%;
@@ -208,6 +205,7 @@ main {
 }
 
 #contact h2 {
+    text-align: center;
     font-size: 35px;
 }
 
